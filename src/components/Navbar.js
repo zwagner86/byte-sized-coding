@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 
 const Navbar = () => (
@@ -15,25 +14,15 @@ const Navbar = () => (
       </div>
       <div className="Navbar-center">
         <div className="Navbar-links">
-          <Link className="navbar-item" to="/about">
-            About
-          </Link>
-          <Link className="navbar-item" to="/products">
-            Products
+          <Link className="navbar-item" to="/tags/brewing">
+            Brewing
           </Link>
         </div>
       </div>
       <div className="Navbar-right">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
+        <Link className="navbar-item" to="/about">
+          About
+        </Link>
       </div>
     </div>
   </nav>
