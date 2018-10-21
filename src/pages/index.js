@@ -13,9 +13,6 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
             {posts
               .map(({ node: post }) => (
                 <BlogPost
@@ -53,6 +50,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            tags
             templateKey
             date(formatString: "MMMM DD, YYYY")
           }

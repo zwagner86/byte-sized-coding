@@ -5,16 +5,17 @@ import { Link } from 'gatsby'
 const BlogPost = ({
     post
 }) => {
+    console.log(post);
     return (
         <div
             className="BlogPost content"
-            style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
         >
-            <p>
+            <h1>
                 <Link className="has-text-primary" to={post.fields.slug}>
                     {post.frontmatter.title}
                 </Link>
-                <span> &bull; </span>
+            </h1>
+            <p>
                 <small>{post.frontmatter.date}</small>
             </p>
             <p>
@@ -25,6 +26,20 @@ const BlogPost = ({
                     Keep Reading →
                 </Link>
             </p>
+            {post.frontmatter.tags &&
+                <p>
+                    {post.frontmatter.tags.map(tag => {
+                        return (
+                            <span
+                                className="BlogPost-category"
+                                key={tag}
+                            >
+                                {tag}
+                            </span>
+                        );
+                    })}
+                </p>
+            }
         </div>
     );
 };
