@@ -10,7 +10,7 @@ const TemplateWrapper = ({ children }) => (
       <body className="has-navbar-fixed-top"></body>
     </Helmet>
     <Navbar />
-    <div>{children}</div>
+    <div className="Layout">{children}</div>
   </div>
 )
 
