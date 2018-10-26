@@ -4,9 +4,11 @@ title: React Higher-Order Component Using Refs
 date: 2018-10-20T15:04:10.000Z
 description: How to make your higher-order component play nice with your stateless functional components.
 tags:
-  - React
-  - JavaScript
+  - react
+  - javascript
 ---
+
+![guy on computer](/img/guy-on-comp.jpg)
 
 A higher-order component (HOC) is an advanced technique in React for reusing component logic.  Basically, a higher-order component is a function that takes a component and returns a new component.
 

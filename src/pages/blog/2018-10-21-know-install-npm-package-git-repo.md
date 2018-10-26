@@ -4,8 +4,11 @@ title: Install NPM Package from a Git Repo
 date: 2018-10-21T15:04:10.000Z
 description: The more you know...
 tags:
-  - JavaScript
+  - javascript
 ---
+
+![color-monitor](/img/color-monitor.jpg)
+
 
 Did you know you can <code>npm install</code> from a Git Repository?
 

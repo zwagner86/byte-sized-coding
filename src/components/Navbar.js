@@ -8,14 +8,21 @@ const Navbar = () => (
       <div className="Navbar-left">
         <Link to="/" className="navbar-item">
           <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <img src={logo} alt="Byte-Sized Coding" style={{ width: '32px' }} />
           </figure>
+          <div className="Navbar-brand-name">
+            <div>BYTE-SIZED</div>
+            <div>CODING</div>
+          </div>
         </Link>
       </div>
       <div className="Navbar-center">
         <div className="Navbar-links">
-          <Link className="navbar-item" to="/tags/brewing">
-            Brewing
+          <Link className="navbar-item" to="/">
+            All
+          </Link>
+          <Link className="navbar-item" to="/tags/javascript">
+            JavaScript
           </Link>
         </div>
       </div>
