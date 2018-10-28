@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
-const BlogPost = ({
-    post
-}) => {
-    console.log(post);
+const BlogPost = ({ post }) => {
     return (
-        <div
-            className="BlogPost content"
-        >
+        <div className="BlogPost content">
             <h1>
-                <Link className="has-text-primary" to={post.fields.slug}>
+                <Link
+                    className="has-text-primary"
+                    to={post.fields.slug}
+                >
                     {post.frontmatter.title}
                 </Link>
             </h1>
@@ -22,11 +20,14 @@ const BlogPost = ({
                 {post.excerpt}
                 <br />
                 <br />
-                <Link className="button is-small" to={post.fields.slug}>
+                <Link
+                    className="button is-small"
+                    to={post.fields.slug}
+                >
                     Keep Reading →
                 </Link>
             </p>
-            {post.frontmatter.tags &&
+            {post.frontmatter.tags && (
                 <p>
                     {post.frontmatter.tags.map(tag => {
                         return (
@@ -39,7 +40,7 @@ const BlogPost = ({
                         );
                     })}
                 </p>
-            }
+            )}
         </div>
     );
 };
