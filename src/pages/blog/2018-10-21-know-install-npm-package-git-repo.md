@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Install NPM Package from a Git Repo
 date: 2018-10-21T15:04:10.000Z
 description: The more you know...
+category: javascript
 tags:
   - javascript
 ---

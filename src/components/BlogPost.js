@@ -1,3 +1,4 @@
+import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
@@ -17,11 +18,9 @@ const BlogPost = ({ post }) => {
                 <small>{post.frontmatter.date}</small>
             </p>
             <p>
-                {post.excerpt}
-                <br />
-                <br />
+                <div className="BlogPost-excerpt">{post.excerpt}</div>
                 <Link
-                    className="button is-small"
+                    className="BlogPost-keep-reading button is-small"
                     to={post.fields.slug}
                 >
                     Keep Reading →
@@ -31,12 +30,13 @@ const BlogPost = ({ post }) => {
                 <p>
                     {post.frontmatter.tags.map(tag => {
                         return (
-                            <span
+                            <Link
                                 className="BlogPost-category"
+                                to={`/tags/${kebabCase(tag)}/`}
                                 key={tag}
                             >
                                 {tag}
-                            </span>
+                            </Link>
                         );
                     })}
                 </p>

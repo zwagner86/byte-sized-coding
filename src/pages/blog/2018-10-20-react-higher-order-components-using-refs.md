@@ -3,6 +3,7 @@ templateKey: blog-post
 title: React Higher-Order Component Using Refs
 date: 2018-10-20T15:04:10.000Z
 description: How to make your higher-order component play nice with your stateless functional components.
+category: react
 tags:
   - react
   - javascript

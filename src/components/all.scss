@@ -7,6 +7,10 @@ $primary-blue-invert: #ffffff;
 $primary: $primary-blue;
 $primary-invert: $primary-blue-invert;
 
+$my-gray: #3d556b;
+
+@import "~bulma";
+
 .content .taglist {
     list-style: none;
     margin: 1.5rem 1.5rem 0 0;
@@ -85,12 +89,21 @@ body {
     }
 
     @media (min-width: $desktop) {
-        padding: 2em 4em;
+        padding: 4em;
         margin-bottom: 4rem !important;
         border-bottom: none;
         border-radius: 8px;
         box-shadow: inset 0 0 0 1px $white-ter, 0 5px 15px -5px rgba(0, 0, 0, 0.2);
     }
+}
+
+.BlogPost-excerpt {
+    line-height: 1.7;
+    color: $my-gray;
+}
+
+.BlogPost-keep-reading {
+    margin-top: 1rem;
 }
 
 .BlogPost-category {
@@ -171,5 +184,3 @@ body {
     flex: 1;
     justify-content: flex-end;
 }
-
-@import "~bulma";
