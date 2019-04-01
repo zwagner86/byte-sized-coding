@@ -5,13 +5,17 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import Disqus from '../components/Disqus';
+import Share from '../components/Share';
 
 export const BlogPostTemplate = ({
     content,
     contentComponent,
     description,
     tags,
-    title
+    title,
+    slug,
+    excerpt
 }) => {
     const PostContent = contentComponent || Content;
 
@@ -42,6 +46,15 @@ export const BlogPostTemplate = ({
                                 </ul>
                             </div>
                         ) : null}
+                        <Share
+                            title={title}
+                            slug={slug}
+                            excerpt={excerpt}
+                        />
+                        <Disqus
+                            title={title}
+                            slug={slug}
+                        />
                     </div>
                 </div>
             </div>
@@ -54,6 +67,8 @@ BlogPostTemplate.propTypes = {
     contentComponent: PropTypes.func,
     description: PropTypes.string,
     title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string)
 };
 
@@ -69,6 +84,8 @@ const BlogPost = ({ data }) => {
                 helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
                 tags={post.frontmatter.tags}
                 title={post.frontmatter.title}
+                slug={post.fields.slug}
+                excerpt={post.excerpt}
             />
         </Layout>
     );
@@ -85,8 +102,12 @@ export default BlogPost;
 export const pageQuery = graphql`
     query BlogPostByID($id: String!) {
         markdownRemark(id: { eq: $id }) {
+            excerpt(pruneLength: 400)
             id
             html
+            fields {
+                slug
+            }
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
                 title
