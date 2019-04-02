@@ -14,10 +14,10 @@ const BlogPost = ({ post }) => {
                     {post.frontmatter.title}
                 </Link>
             </h1>
-            <p>
+            <div className="BlogPost-section">
                 <small>{post.frontmatter.date}</small>
-            </p>
-            <p>
+            </div>
+            <div className="BlogPost-section">
                 <div className="BlogPost-excerpt">{post.excerpt}</div>
                 <Link
                     className="BlogPost-keep-reading button is-small"
@@ -25,9 +25,9 @@ const BlogPost = ({ post }) => {
                 >
                     Keep Reading →
                 </Link>
-            </p>
+            </div>
             {post.frontmatter.tags && (
-                <p>
+                <div className="BlogPost-section">
                     {post.frontmatter.tags.map(tag => {
                         return (
                             <Link
@@ -39,7 +39,7 @@ const BlogPost = ({ post }) => {
                             </Link>
                         );
                     })}
-                </p>
+                </div>
             )}
         </div>
     );
