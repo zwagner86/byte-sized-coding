@@ -4,27 +4,26 @@ import { graphql } from 'gatsby';
 import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
 
-export default class IndexPage extends React.Component {
-    render() {
-        const { data } = this.props;
-        const { edges: posts } = data.allMarkdownRemark;
+const IndexPage = ({
+    data
+}) => {
+    const { edges: posts } = data.allMarkdownRemark;
 
-        return (
-            <Layout>
-                <section className="section">
-                    <div className="container">
-                        {posts.map(({ node: post }) => (
-                            <BlogPost
-                                post={post}
-                                key={post.id}
-                            />
-                        ))}
-                    </div>
-                </section>
-            </Layout>
-        );
-    }
-}
+    return (
+        <Layout>
+            <section className="section">
+                <div className="container">
+                    {posts.map(({ node: post }) => (
+                        <BlogPost
+                            post={post}
+                            key={post.id}
+                        />
+                    ))}
+                </div>
+            </section>
+        </Layout>
+    );
+};
 
 IndexPage.propTypes = {
     data: PropTypes.shape({
@@ -33,6 +32,8 @@ IndexPage.propTypes = {
         })
     })
 };
+
+export default IndexPage;
 
 export const pageQuery = graphql`
     query IndexQuery {

@@ -21,7 +21,14 @@ export const BlogPostTemplate = ({
 
     return (
         <section className="section">
-            <Helmet title={`${title} | Blog`} />
+            <Helmet
+                title={`${title} | Blog`}
+            >
+                <meta
+                    name="description"
+                    content={description}
+                />
+            </Helmet>
             <div className="container content">
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
@@ -30,7 +37,7 @@ export const BlogPostTemplate = ({
                         </h1>
                         <p>{description}</p>
                         <PostContent content={content} />
-                        {tags && tags.length ? (
+                        {(tags && tags.length) ? (
                             <div style={{ marginTop: `4rem` }}>
                                 <h4>Tags</h4>
                                 <ul className="taglist">

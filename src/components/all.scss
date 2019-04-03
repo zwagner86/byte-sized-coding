@@ -46,6 +46,8 @@ $my-gray: #3d556b;
 }
 
 html {
+    height: 100%;
+
     body.has-navbar-fixed-top {
         padding-top: 5.5rem;
 
@@ -56,6 +58,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     background-color: $white;
 
     @media (min-width: $desktop) {
