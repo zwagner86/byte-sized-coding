@@ -6,6 +6,12 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         {
+            resolve: 'gatsby-plugin-google-analytics',
+            options: {
+                trackingId: 'UA-137956337-1',
+            },
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 path: `${__dirname}/src/pages`,
