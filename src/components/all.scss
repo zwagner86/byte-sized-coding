@@ -131,7 +131,7 @@ body {
     border-bottom: none;
 
     @media (min-width: $desktop) {
-        box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
         background-color: $white-bis;
     }
 }
@@ -176,7 +176,7 @@ body {
     left: 0;
     top: 46px;
     justify-content: center;
-    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.2);
     z-index: 30;
 
     @media (min-width: $desktop) {
