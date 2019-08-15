@@ -50,6 +50,6 @@
     "@spothero/eslint-config": "1.6.0",
     "@spothero/stylelint-config": "1.3.0",
     "prettier": "1.16.4",
-    "rimraf": "2.6.3"
+    "rimraf": "3.0.0"
   }
 }
