@@ -5955,14 +5955,14 @@ gatsby-plugin-netlify-cms@3.0.18:
     netlify-identity-widget "^1.4.11"
     webpack "^4.16.0"
 
-gatsby-plugin-netlify@2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.13.tgz#8cd3bfed759c514548338b1def8321a78c7d77f4"
+gatsby-plugin-netlify@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.1.5.tgz#c6780e706adda40577d2b89bec8b6c5c7cfb7a3c"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
     kebab-hash "^0.1.2"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     webpack-assets-manifest "^3.0.2"
 
 gatsby-plugin-page-creator@^2.0.12:
