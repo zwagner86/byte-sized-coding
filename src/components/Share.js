@@ -6,7 +6,6 @@ import {
     TwitterShareButton,
     RedditShareButton,
     FacebookShareCount,
-    LinkedinShareCount,
     RedditShareCount,
     FacebookIcon,
     TwitterIcon,
@@ -21,9 +20,9 @@ const Share = ({
     excerpt,
     mobile
 }) => {
-    const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+    const realPrefix = (config.pathPrefix === '/') ? '' : config.pathPrefix;
     const url = config.siteUrl + realPrefix + slug;
-    const iconSize = mobile ? 36 : 48;
+    const iconSize = (mobile) ? 36 : 48;
 
     return (
         <div className="Share">
@@ -36,7 +35,7 @@ const Share = ({
                     size={iconSize}
                 />
                 <RedditShareCount url={url}>
-                    {count => <div className="Share-count">{count > 0 ? count : ''}</div>}
+                    {count => <div className="Share-count">{(count > 0) ? count : ''}</div>}
                 </RedditShareCount>
             </RedditShareButton>
             <TwitterShareButton
@@ -57,7 +56,7 @@ const Share = ({
                     size={iconSize}
                 />
                 <FacebookShareCount url={url}>
-                    {count => <div className="Share-count">{count > 0 ? count : ''}</div>}
+                    {count => <div className="Share-count">{(count > 0) ? count : ''}</div>}
                 </FacebookShareCount>
             </FacebookShareButton>
             <LinkedinShareButton
@@ -69,9 +68,6 @@ const Share = ({
                     round
                     size={iconSize}
                 />
-                <LinkedinShareCount url={url}>
-                    {count => <div className="Share-count">{count > 0 ? count : ''}</div>}
-                </LinkedinShareCount>
             </LinkedinShareButton>
         </div>
     );
