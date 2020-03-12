@@ -12,7 +12,7 @@
     "gatsby-plugin-netlify-cms": "4.1.21",
     "gatsby-plugin-react-helmet": "3.1.10",
     "gatsby-plugin-sass": "2.1.17",
-    "gatsby-plugin-sharp": "2.2.27",
+    "gatsby-plugin-sharp": "2.4.11",
     "gatsby-remark-images": "3.1.25",
     "gatsby-remark-prismjs": "3.3.16",
     "gatsby-source-filesystem": "2.1.28",
