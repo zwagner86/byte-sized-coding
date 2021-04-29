@@ -1,0 +1,33 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.4
+    - 2.5.3
+  - dependency-name: eslint
+    versions:
+    - 7.16.0
+  - dependency-name: gatsby-remark-prismjs
+    versions:
+    - 3.8.0
+  - dependency-name: gatsby-plugin-netlify
+    versions:
+    - 2.6.0
+  - dependency-name: prismjs
+    versions:
+    - 1.21.0
+  - dependency-name: gatsby
+    versions:
+    - 2.24.23
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: gatsby-plugin-sass
+    versions:
+    - 2.3.7
